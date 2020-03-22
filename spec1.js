@@ -9,7 +9,7 @@ describe('SmokeTests',function() {
         element(by.xpath("//input[@name='password']")).sendKeys('Acquire234$');
         element(by.xpath("//input[@type='submit']")).click();
         
-        
+        // comment add
         var until = protractor.ExpectedConditions;
         browser.wait(until.presenceOf(element(by.xpath("//button/span[contains(text(),'Add Deal')]"))), 180000, 'Element taking too long to appear in the DOM');
         //browser.waitForAngularEnabled(true);
