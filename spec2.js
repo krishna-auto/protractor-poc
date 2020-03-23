@@ -18,6 +18,7 @@ describe('SmokeTests1',function() {
     },400000)
     it('adddeal',function(){
         //browser.ignoreSynchronization = false;
+       // browser.waitForAngularEnabled(true);
         var until = protractor.ExpectedConditions;
         element(by.xpath("//button/span[contains(text(),'Add Deal')]")).click();
         //    browser.ignoreSynchronization = false;
