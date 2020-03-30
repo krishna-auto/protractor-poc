@@ -12,10 +12,14 @@ exports.config = {
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     
-  'browserName': "MicrosoftEdge"
-  
+  'browserName': "MicrosoftEdge",
+  platform: 'Windows 10',
+//  version: '13.10586'
+
   },
-  
+    onPrepare: function() {
+        browser.ignoreSynchronization = false;
+    },
 
   // Framework to use. Jasmine is recommended.
   framework: 'jasmine',

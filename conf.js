@@ -9,23 +9,51 @@ var reporter = new HtmlScreenshotReporter({
 exports.config = {
   directConnect: true,
 
+  onPrepare: function(){
+    browser.manage().timeouts().implicitlyWait(10000);
+},
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     
-  'browserName': 'chrome'
+  'browserName': 'chrome',
+  //'directConnect': true,
+   //chromeOptions: {args: ['--headless', "--window-size=1920,1080"]} 
     
    //'browserName': 'firefox'
-  //'browserName': "MicrosoftEdge"
   
+  
+  }, 
+  /*
+  //multiple browser parallel execution
+  multiCapabilities : [{
+    browserName : 'firefox',
   },
+  {
+    browserName : 'chrome'
+  },  
+],
+*/
+/*
+// Single browser parallel execution
+   capabilities: {
+      'browserName': 'firefox',
+	  'shardTestFiles': true,
+      'maxInstances': 2
+    },
   
+    framework: 'jasmine',
+    specs: [
+        'spec1.js',
+        'spec2.js'
+    ],
 
+*/
   // Framework to use. Jasmine is recommended.
   framework: 'jasmine',
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
-  specs: ['spec2.js'],
+  specs: ['spec3.js'],
 
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
@@ -41,6 +69,17 @@ exports.config = {
   // Assign the test reporter to each running instance
   onPrepare: function () {
 
+    /*browser.getCapabilities().then(function (cap) {
+      console.log(cap);
+      browser.browserName = cap.caps_.browserName;
+      jasmine.getEnv().addReporter(new HtmlReporter({
+          baseDirectory: 'target/'+browser.browserName+'/angular-test-result/',
+          takeScreenShotsOnlyForFailedSpecs: true,
+          preserveDirectory: false
+      }));
+  });*/
+
+ 
     var jasmineReporters = require('jasmine-reporters');
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       consolidateAll: true,

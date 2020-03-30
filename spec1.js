@@ -24,10 +24,18 @@ describe('SmokeTests',function() {
             browser.sleep(1000);
             element(by.xpath("//button//span[contains(text(),'Create')]")).click();
             browser.sleep(1000);
+            element(by.xpath("//a[contains(text(),'Strategy')]")).click();
+            browser.sleep(1000);
+            element(by.xpath("//a[contains(text(),'Models')]")).click();
+            browser.sleep(1000);
+            element(by.xpath("//a[contains(text(),'Tasks')]")).click();
+            browser.sleep(1000);
+            //a[contains(text(),'Strategy')]
             //navigate to home button
             element(by.xpath("//i[contains(@class,'icon-argus')]")).click();
             browser.wait(until.presenceOf(element(by.xpath("//button/span[contains(text(),'Add Deal')]"))), 15000, 'Element taking too long to appear in the DOM');
             element(by.xpath("//i[contains(@class,'icon-account')]")).click();
+            browser.sleep(1000);
             element(by.xpath("//div[@class='logout-btn']//button")).click();
             
 
