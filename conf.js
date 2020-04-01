@@ -14,7 +14,7 @@ exports.config = {
 },
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    
+  // 'browserName': 'firefox' 
   'browserName': 'chrome',
   //'directConnect': true,
    //chromeOptions: {args: ['--headless', "--window-size=1920,1080"]} 
