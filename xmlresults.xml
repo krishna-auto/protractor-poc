@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="7" time="51.276">
- <testsuite name="SmokeTests1" timestamp="2020-04-01T09:47:19" hostname="localhost" time="51.276" errors="0" tests="7" skipped="0" disabled="0" failures="0">
-  <testcase classname="SmokeTests1" name="loginintoAcquire" time="1.593" />
-  <testcase classname="SmokeTests1" name="VerifyPipelinePage" time="30.118" />
-  <testcase classname="SmokeTests1" name="adddeal" time="2.874" />
-  <testcase classname="SmokeTests1" name="upload an image file" time="1.462" />
-  <testcase classname="SmokeTests1" name="select value from dropdown strategy page" time="1.554" />
-  <testcase classname="SmokeTests1" name="add a task" time="1.356" />
-  <testcase classname="SmokeTests1" name="Logout" time="2.095" />
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="0.009">
+ <testsuite name="SampleTest" timestamp="2020-04-01T13:35:05" hostname="localhost" time="0.009" errors="0" tests="1" skipped="0" disabled="0" failures="1">
+  <testcase classname="SampleTest" name="launchgoogle" time="0.006">
+   <failure type="toEqual" message="Expected 100 to equal 200."><![CDATA[Error: Failed expectation
+    at UserContext.<anonymous> (D:\acq sol\protractor-poc\spec3.js:6:21)
+    at C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\krishna.angara\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7]]>
+   </failure>
+  </testcase>
  </testsuite>
 </testsuites>
