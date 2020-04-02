@@ -13,7 +13,7 @@ exports.config = {
     browser.manage().timeouts().implicitlyWait(10000);
 },
   // Capabilities to be passed to the webdriver instance.
-  capabilities: {
+/*  capabilities: {
   // 'browserName': 'firefox' 
   'browserName': 'chrome',
   //'directConnect': true,
@@ -22,7 +22,8 @@ exports.config = {
    //'browserName': 'firefox'
   
   
-  }, 
+  },
+  */ 
   /*
   //multiple browser parallel execution
   multiCapabilities : [{
@@ -33,27 +34,29 @@ exports.config = {
   },  
 ],
 */
-/*
+
 // Single browser parallel execution
    capabilities: {
       'browserName': 'firefox',
 	  'shardTestFiles': true,
-      'maxInstances': 2
+      'maxInstances': 4
     },
   
     framework: 'jasmine',
     specs: [
+        'spec3.js',
+        'spec4.js',
         'spec1.js',
         'spec2.js'
     ],
 
-*/
+
   // Framework to use. Jasmine is recommended.
-  framework: 'jasmine',
+  //framework: 'jasmine',
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
-  specs: ['spec3.js'],
+  //specs: ['spec4.js'],
 
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {

@@ -3,7 +3,7 @@ describe('SmokeTests1',function() {
         originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
         jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
       });
-      browser.manage().timeouts().implicitlyWait(30000);
+      browser.manage().timeouts().implicitlyWait(10000);
     
     it('launchacquire1',function(){
         browser.ignoreSynchronization = true;
@@ -17,7 +17,7 @@ describe('SmokeTests1',function() {
         element(by.xpath("//input[@type='submit']")).click();
         
     },300000)
-    it('waitforsometime',function(){
+    it('verifypipeline',function(){
         browser.ignoreSynchronization = true;
         var until1 = protractor.ExpectedConditions;
         browser.wait(until1.presenceOf(element(by.xpath("//button/span[contains(text(),'Add Deal')]"))), 400000, 'Element taking too long to appear in the DOM');
@@ -38,7 +38,7 @@ describe('SmokeTests1',function() {
             //browser.sleep(2000);
             //expect(element(by.xpath("//app-page-head-title//h1").getText())).toBe('Auto+1234');
         },300000);        
-        it('upload an image file',function(){
+        it('uploadImage',function(){
             browser.sleep(4000);
             var path = require('path');
             var fileToUpload = '../files/SamplePNGImage_100kbmb.png',
@@ -51,7 +51,7 @@ describe('SmokeTests1',function() {
             //browser.sleep(5000);
         })
 
-        it('select value from dropdown strategy page',function(){
+        it('SelectOrganization',function(){
             element(by.xpath("//a[contains(text(),'Strategy')]")).click();
             browser.sleep(1000);
             element(by.xpath("//label[contains(text(),'organization')]/parent::div//mat-select[contains(@class,'mat-select')]")).click();
@@ -87,7 +87,7 @@ describe('SmokeTests1',function() {
             //navigate to home button
         },300000)
         */
-        it('add a task',function(){
+        it('AddTask',function(){
             element(by.xpath("//a[contains(text(),'Tasks')]")).click();
             browser.sleep(2000);
             //
